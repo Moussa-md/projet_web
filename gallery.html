@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Galerie - Site des pays africains</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+      <div class="search-container">
+    <input type="text" id="search-input" placeholder="Rechercher un pays...">
+    <button id="search-btn">🔍</button>
+    <div id="search-results"></div>
+    </div>
+      <div class="brand">
+          <img src="logo.png" alt="Logo du site" width="50">
+      </div>
+
+     <div class="title1">
+       Mama Africa
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="countries.html">Pays</a></li>
+          <li><a href="map.html">Carte de l'Afrique</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="student.html">Informations sur le développeur</a></li>
+        </ul>
+      </nav>
+    </header>
+  <div class="container">
+
+    
+
+    <h1 class="card">Galerie des pays africains</h1>
+    <p>Découvrez la beauté et la diversité de l'Afrique à travers ces images :</p>
+
+    <div class="filter-buttons">
+  <button onclick="filterGallery('all')">Tous</button>
+  <button onclick="filterGallery('maroc')">Maroc</button>
+  <button onclick="filterGallery('egypte')">Égypte</button>
+  <button onclick="filterGallery('kenya')">Kenya</button>
+  <button onclick="filterGallery('tanzanie')">Tanzanie</button>
+  <button onclick="filterGallery('nigeria')">Nigeria</button>
+  <button onclick="filterGallery('afrique-du-sud')">Afrique du Sud</button>
+  <button onclick="filterGallery('ethiopia')">Éthiopia</button>
+  <button onclick="filterGallery('ghana')">Ghana</button>
+  <button onclick="filterGallery('senegal')">Sénégal</button>
+  <button onclick="filterGallery('tunisie')">Tunisie</button>
+</div>
+
+
+      
+      <div class="gallery-items">
+        <div class="gallery-item" data-country="maroc">
+          <img src="morocco-1.png" alt="Mosquée Hassan II, Casablanca" onclick="zoomImage('morocco-1.jpg')">
+          <div class="caption">Mosquée Hassan II, Casablanca - Maroc</div>
+        </div>
+        
+        <div class="gallery-item" data-country="maroc">
+          <img src="morocco-2.jpg" alt="Place Jemaa el-Fna, Marrakech" onclick="zoomImage('morocco-2.jpg')">
+          <div class="caption">Place Jemaa el-Fna, Marrakech - Maroc</div>
+        </div>
+        
+        <div class="gallery-item" data-country="egypte">
+          <img src="egypt-1.jpg" alt="Pyramides de Gizeh" onclick="zoomImage('egypt-1.jpg')">
+          <div class="caption">Pyramides de Gizeh - Égypte</div>
+        </div>
+        
+        <div class="gallery-item" data-country="egypte">
+          <img src="egypt-2.jpg" alt="Temple de Louxor" onclick="zoomImage('egypt-2.jpg')">
+          <div class="caption">Temple de Louxor - Égypte</div>
+        </div>
+        
+        <div class="gallery-item" data-country="kenya">
+          <img src="kenya-1.jpg" alt="Safari au Kenya" onclick="zoomImage('kenya-1.jpg')">
+          <div class="caption">Safari dans le Masai Mara - Kenya</div>
+        </div>
+        
+        <div class="gallery-item" data-country="kenya">
+          <img src="kenya-2.jpg" alt="Plages de Mombasa" onclick="zoomImage('kenya-2.jpg')">
+          <div class="caption">Plages de Mombasa - Kenya</div>
+        </div>
+        
+        <div class="gallery-item" data-country="tanzanie">
+          <img src="tanzania-1.jpg" alt="Mont Kilimandjaro" onclick="zoomImage('tanzania-1.jpg')">
+          <div class="caption">Mont Kilimandjaro - Tanzanie</div>
+        </div>
+        
+        <div class="gallery-item" data-country="tanzanie">
+          <img src="tanzania-2.jpg" alt="Parc du Serengeti" onclick="zoomImage('tanzania-2.jpg')">
+          <div class="caption">Parc national du Serengeti - Tanzanie</div>
+        </div>
+
+        <div class="gallery-item" data-country="nigeria">
+          <img src="nigeria-1.jpg" alt="Lagos" onclick="zoomImage('nigeria-1.jpg')">
+          <div class="caption">Lagos - Nigeria</div>
+        </div>
+
+      <div class="gallery-item" data-country="nigeria">
+        <img src="nigeria-2.jpeg" alt="Abuja" onclick="zoomImage('nigeria-2.jpg')">
+        <div class="caption">Abuja - Nigeria</div>
+      </div>
+
+      <div class="gallery-item" data-country="afrique-du-sud">
+        <img src="southafrica-1.jpg" alt="Table Mountain" onclick="zoomImage('southafrica-1.jpg')">
+        <div class="caption">Table Mountain - Afrique du Sud</div>
+      </div>
+
+      <div class="gallery-item" data-country="afrique-du-sud">
+        <img src="southafrica-2.jpeg" alt="Kruger National Park" onclick="zoomImage('southafrica-2.jpg')">
+        <div class="caption">Parc national Kruger - Afrique du Sud</div>
+      </div>
+
+      <div class="gallery-item" data-country="ethiopia">
+        <img src="ethiopia-1.jpg" alt="Lalibela" onclick="zoomImage('ethiopia-1.jpg')">
+        <div class="caption">Églises de Lalibela - Éthiopia</div>
+      </div>
+
+      <div class="gallery-item" data-country="ethiopia">
+        <img src="ethiopia-2.jpg" alt="Simien Mountains" onclick="zoomImage('ethiopia-2.jpg')">
+        <div class="caption">Montagnes du Simien - Éthiopia</div>
+      </div>
+
+      <div class="gallery-item" data-country="ghana">
+        <img src="ghana-1.jpg" alt="Cape Coast Castle" onclick="zoomImage('ghana-1.jpg')">
+        <div class="caption">Cape Coast Castle - Ghana</div>
+      </div>
+
+     <div class="gallery-item" data-country="ghana">
+      <img src="ghana-2.jpg" alt="Kakum National Park" onclick="zoomImage('ghana-2.jpg')">
+      <div class="caption">Parc national de Kakum - Ghana</div>
+    </div>
+
+    <div class="gallery-item" data-country="senegal">
+      <img src="senegal-1.jpg" alt="Lac Rose" onclick="zoomImage('senegal-1.jpg')">
+      <div class="caption">Lac Rose - Sénégal</div>
+    </div>
+
+    <div class="gallery-item" data-country="senegal">
+      <img src="senegal-2.jpeg" alt="Dakar" onclick="zoomImage('senegal-2.jpg')">
+      <div class="caption">Dakar - Sénégal</div>
+    </div>
+
+    <div class="gallery-item" data-country="tunisie">
+      <img src="tunisie-1.jpg" alt="Sidi Bou Saïd" onclick="zoomImage('tunisie-1.jpg')">
+      <div class="caption">Sidi Bou Saïd - Tunisie</div>
+    </div>
+
+    <div class="gallery-item" data-country="tunisie">
+      <img src="tunisie-2.jpg" alt="Sahara Tunisien" onclick="zoomImage('tunisie-2.jpg')">
+      <div class="caption">Désert du Sahara - Tunisie</div>
+    </div>
+  </div>
+  <p class="highlight">
+    Il reste encore d’innombrables endroits magnifiques à découvrir dans de nombreux pays africains, des paysages naturels exceptionnels aux cultures riches et authentiques.
+</p>
+</div>
+</div>
+  
+  <footer>
+    <small>© 2025 Projet scolaire - Mama Africa</small>
+  </footer>
+
+</body>
+</html>

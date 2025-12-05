@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carte Interactive de l'Afrique - Site des pays africains</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    
+      <div class="brand">
+          <img src="logo.png" alt="Logo du site" width="50">
+      </div>
+      <div class="title1">
+       Mama Africa
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="countries.html">Pays</a></li>
+          <li><a href="map.html">Carte de l'Afrique</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="student.html">Informations sur le développeur</a></li>
+        </ul>
+      </nav>
+    </header>
+  <div class="container">
+
+
+    <h1 class="card">Carte Interactive de l'Afrique</h1>
+
+    <div class="map-container">
+      <div class="africa-map">
+        <img src="africa_map.svg" alt="Carte de l'Afrique" id="africa-map" usemap="#africamap">
+      </div>
+      
+      <div class="map-info">
+        <h3>Informations sur les pays</h3>
+        <div id="country-details" class="country-details" style="display: none;">
+          Les informations du pays apparaîtront ici
+        </div>
+        
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Rechercher un pays...">
+          <button id="search-btn">🔍</button>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <footer>
+    <small>© 2025 Projet scolaire - Mama Africa</small>
+  </footer>
+</body>
+</html>
